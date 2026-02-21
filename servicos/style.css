@@ -1,0 +1,330 @@
+:root {
+  --verde-escuro: #0f3b2e;
+  --verde: #1f6b4f;
+  --verde-claro: #e6f2ec;
+  --areia: #f4f7f5;
+  --texto: #1c2b25;
+  --branco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--areia);
+  color: var(--texto);
+  line-height: 1.6;
+  padding-top: 100px;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+header {
+  background: #19340b;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 65px;
+  width: auto;
+  display: block;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* força logo esquerda e menu direita */
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--branco);
+}
+
+.logo {
+  font-weight: 700;
+}
+
+.nav-links a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===== HERO SERVIÇOS ===== */
+
+.servicos-hero {
+  background: linear-gradient(rgba(15,59,46,0.75), rgba(15,59,46,0.75)),
+              url('https://images.unsplash.com/photo-1682269221361-9b6990dffd2d');
+  background-size: cover;
+  background-position: center;
+  color: var(--branco);
+  padding: 5rem 0;
+}
+
+.servicos-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.servicos-hero p {
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+
+/* ===== SEÇÃO SERVIÇOS ===== */
+
+.servicos-section {
+  background: var(--areia);
+  align-items: left;
+overflow-x: hidden
+}
+
+
+/* Grid igual ao padrão mas mais espaçado */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+
+/* ===== CARD ESTILO BLOG ===== */
+
+.servico-card {
+  background: #f3f5f4;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  height: auto;
+  align-items: flex-start;
+  text-decoration: none;
+}
+
+.servico-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  background: #e7e7e7;
+}
+
+.servico-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.servico-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 11rem;
+  align-items: left;
+}
+
+.servico-content h3 {
+  color: var(--verde-escuro);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.servico-content h4 {
+  color: var(--verde-escuro);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.servico-content p {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #4b5c55;
+}
+
+
+/* Botão alinhado com seu padrão */
+.servico-content .btn {
+  align-self: flex-start;
+}
+
+
+/* ===== SEÇÃO INTERNA DO SERVIÇO (caso crie página individual) ===== */
+
+.servico-detalhe h2 {
+  margin-bottom: 1.5rem;
+}
+
+.servico-detalhe p {
+  max-width: 800px;
+  margin-bottom: 1.2rem;
+}
+
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+
+  .servicos-hero {
+    text-align: left;
+  }
+
+  .servico-content {
+    text-align: left;
+  }
+
+  .servico-content .btn {
+    align-self: left;
+  }
+
+}
+
+.carousel-wrapper {
+  position: relative;
+  padding: 0 160px;      /* espaço pra respirar */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.servico-card {
+  min-width: 300px;
+  max-width: 300px;
+  flex-shrink: 0;
+  text-align: left;
+  background: #dbdbdb;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: center;
+  background: var(--verde-escuro);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: var(--verde);
+}
+.carousel-container{
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-controls{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.arrow {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 18px;
+}
+
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servico-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+
+  .next {
+    right: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background: #19340b;
+}
+
+h3{
+  color: #19340b;
+}
+
+h2{
+  color: #36681d;
+}
+
+#levantamento{
+  scroll-margin-top: 120px;
+}
+
+#georreferenciamento{
+  scroll-margin-top: 120px;
+}
+
+#mapeamento{
+  scroll-margin-top: 120px;
+}
+
+#consultoria-ambiental{
+  scroll-margin-top: 120px;
+}
+
+#assessoria{
+  scroll-margin-top: 120px;
+}
+
+#locacao-demarcacao{
+  scroll-margin-top: 120px;
+}
+
+#retificacao{
+  scroll-margin-top: 120px;
+}
