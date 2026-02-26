@@ -141,11 +141,12 @@ header {
   border: 2px solid white;
   color: white;
   padding: 0.8rem 1.3rem;
-  border-radius: 50px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s ease;
   position: center;
+  text-align: center;
 }
 
 .btn-nav:hover{
@@ -204,7 +205,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 100px;
   }
 
   .nav-container {
