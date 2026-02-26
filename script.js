@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <script>
   function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active");
+    document.querySelector(".nav-links").classList.toggle("active")
   }
+
 </script>
