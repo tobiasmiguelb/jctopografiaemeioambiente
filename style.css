@@ -200,10 +200,19 @@ footer {
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    display: block;
   }
 
   .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
     top: 70px;
+    right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
 
   .nav-links.active {

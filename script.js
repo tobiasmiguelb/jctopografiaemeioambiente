@@ -158,3 +158,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = botao.href;
     }, 1200);
   });
+
+  <script>
+  function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
+</script>
