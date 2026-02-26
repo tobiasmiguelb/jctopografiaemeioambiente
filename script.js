@@ -160,8 +160,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   <script>
-  function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("active")
+
+const menuBtn = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", function() {
+      navLinks.classList.toggle("active");
+    })
   }
 
 </script>
