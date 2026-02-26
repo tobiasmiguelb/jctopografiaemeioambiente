@@ -133,6 +133,26 @@ header {
   opacity: 0.85;
 }
 
+.hero-buttons {
+  display: none;
+}
+
+.btn-nav {
+  border: 2px solid white;
+  color: white;
+  padding: 0.8rem 1.3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  position: center;
+}
+
+.btn-nav:hover{
+  background: #19340b;
+  color: #82c345;
+}
+
 section {
   padding: 4rem 0;
 }
@@ -179,6 +199,13 @@ footer {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+
+    .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
 
   .nav-container {
     position: relative;
